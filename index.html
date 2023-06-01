@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- customs -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    <section>
+        <!-- bot ------------------------------ -->
+        
+        <!-- bot ------------------------------ -->
+    </section>
+    <main class="main">
+        <h1 class="text-center h1">Tic Tac Toe</h1>
+        <div class="game-mode">
+            <!-- chose to play with bot or player -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Game Mode</h2>
+                        <button class="btn btn-success playBot-btn" value="Bot">Play with Bot</button>
+                        <button class="btn btn-danger playFriend-btn" value="Friend">Play with Friend</button>
+                    </div>
+                </div>
+            </div>
+            <!-- input name -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <label for="player1">Player 1 Name: </label>
+                        <input type="text" id="player1" class="form-control" placeholder="Enter Player 1 Name">                            
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="player2">Player 2 Name: </label>
+                        <input type="text" id="player2" class="form-control" placeholder="Enter Player 2 Name">
+                    </div>
+                </div>
+            </div>
+            <!-- race to 5 or 10 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <label for="score">Race to:</label>
+                            <select id="score" class="form-control">
+                              <option value="5">5</option>
+                              <option value="10">10</option>
+                            </select>
+                          <button type="button" class="btn btn-primary btn-block start-game-btn">Start Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="game-play">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <!-- player 1 left --> 
+                        <h3 class="player-score">Score</h3>
+                        <h2 class="player-name">player 1</h2> 
+                    </div>
+                    <div class="col-12 col-md-6 board">
+                        <!-- main game at the middle -->
+                        <div class="row board__top">
+                            <div class="col-4 board-box" cellIndex = '0'></div>
+                            <div class="col-4 board-box" cellIndex = '1'></div>
+                            <div class="col-4 board-box" cellIndex = '2'></div>
+                        </div>
+                        <div class="row board__middle">
+                            <div class="col-4 board-box" cellIndex = '3'></div>
+                            <div class="col-4 board-box" cellIndex = '4'></div>
+                            <div class="col-4 board-box" cellIndex = '5'></div>
+                        </div>
+                        <div class="row board__bottom">
+                            <div class="col-4 board-box" cellIndex = '6'></div>
+                            <div class="col-4 board-box" cellIndex = '7'></div>
+                            <div class="col-4 board-box" cellIndex = '8'></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <!-- player 2/ bot right -->
+                        <h3 class="player-score">Score</h3>
+                        <h2 class="player-name">player 2</h2> 
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 class="player-turn"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="game-winner">
+            <div class="container">
+                <div class="row">
+                    <h2 class="h2">Player Win</h2>
+                    <div class="col"><button class="btn btn-primary play-again-btn">Play Again</button></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
