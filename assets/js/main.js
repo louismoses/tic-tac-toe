@@ -18,6 +18,11 @@ let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let gameStatus = false;
 
+let player1Score = document.querySelector(".player1-score");
+let player2Score = document.querySelector(".player2-score");
+let player1 = 0;
+let player2 = 0;
+
 startGameBtn.addEventListener("click", startGame);
 playAgainBtn.addEventListener("click", restartGame);
 
@@ -70,6 +75,7 @@ function checkWinner() {
   } else {
     changeTurn();
   }
+  Scoring();
 }
 
 function restartGame() {
@@ -78,6 +84,16 @@ function restartGame() {
   playerTurn.textContent = `${currentPlayer}'s turn`;
   boardBox.forEach((boardBox) => (boardBox.textContent = ""));
   gameStatus = true;
+}
+function Scoring() {
+  if (playerTurn.textContent === "O wins!") {
+    player2 += 1;
+    player2Score.textContent = player2;
+  }
+  if (playerTurn.textContent === "X wins!") {
+    player1 += 1;
+    player1Score.textContent = player1;
+  }
 }
 
 startGame();
