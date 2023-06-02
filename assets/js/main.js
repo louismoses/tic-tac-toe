@@ -95,5 +95,3 @@ function Scoring() {
     player1Score.textContent = player1;
   }
 }
-
-startGame();
